@@ -70,9 +70,7 @@ module.exports = function(app) {
   app.route('/api/getByState/:statename').get(function(req, res) {
     var statename = req.params.statename;
     var nameQuery = new RegExp('^'+statename+'$', "i");
-    //get by small letter and get by capital letter
-    //
-    //{name: new RegExp('^'+name+'$', "i")
+  
     Hotels.find({
       'statename': nameQuery
     }, function(err, hotels) {
