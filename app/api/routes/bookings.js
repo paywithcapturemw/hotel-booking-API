@@ -125,7 +125,6 @@ module.exports = function(app) {
           console.log(e);
         }
         return res.status(200).send({
-          count: responseArray.length,
           data: responseArray
         });
       }
